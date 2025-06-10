@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers | Swastik Solutions Pvt. Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: black;
+            color: #FFD700;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blur-bg {
+            background: url('assets/images/swastik-bg.png') center/cover no-repeat;
+            background-position: 100px -200px;
+            filter: blur(6px);
+            opacity: 0.20;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .gold-btn {
+            background: linear-gradient(to right, #FFD700, #b8860b);
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="relative">
+
+    <div class="blur-bg"></div>
+    <!-- Sticky Navbar -->
+    <header class="bg-black bg-opacity-90 sticky top-0 z-20 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/images/logo.png" alt="Swastik Logo" class="h-8 w-8">
+                <h1 class="text-xl font-bold text-yellow-400">Swastik Solutions</h1>
+            </div>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="menu-btn" class="text-yellow-300 md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="menu"
+                class="hidden md:flex md:space-x-6 text-yellow-300 flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-center md:text-left">
+                <a href="index.html" class="block py-2 md:py-0 hover:text-yellow-100">Home</a>
+                <a href="index.html" class="block py-2 md:py-0 hover:text-yellow-100">Services</a>
+                <a href="index.html" class="block py-2 md:py-0 hover:text-yellow-100">Portfolio</a>
+                <a href="index.html" class="block py-2 md:py-0 hover:text-yellow-100">Contact</a>
+                <a href="index.html" class="block py-2 md:py-0 text-yellow-100 font-semibold">Career</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Career Content -->
+    <main class="flex-grow content max-w-5xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold text-yellow-300 mb-6">Join Our Team</h2>
+        <p class="text-lg mb-10 text-yellow-200">
+            We’re on the lookout for passionate individuals who are ready to learn, build and grow with us. If you're
+            someone who loves to code, research, and work on real-time projects — you're at the right place.
+        </p>
+
+        <!-- Job Listing -->
+        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg flex justify-between items-center flex-wrap">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-2xl font-semibold text-yellow-300">Web Developer & Research Assistant (Internship)</h3>
+                <p class="text-sm text-yellow-100 mt-2 max-w-xl">
+                    This 3-month internship offers real-time project experience. No stipend during training, but top
+                    performers may get hired with stipend. You'll build live websites, analyze existing platforms, and
+                    help with client research.
+                </p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSev9YhYO3HYwsyQuzq5ldCFUkYw8UYeB3GUz09GihTon4TokA/viewform?usp=dialog"
+                class="gold-btn px-5 py-2 rounded-md font-semibold shadow-lg hover:opacity-80 transition ">Apply Now</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-yellow-200 bg-black bg-opacity-70 border-t border-gray-800 mt-auto">
+        &copy; 2025 Swastik Solutions Pvt. Ltd. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to toggle menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
